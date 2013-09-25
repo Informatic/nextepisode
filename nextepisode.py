@@ -41,7 +41,6 @@ def do_magic(series_name):
             if series[season][episode]['firstaired'] >= now \
                 and (nextep == None or nextep['firstaired'] > series[season][episode]['firstaired']):
                 nextep = series[season][episode]
-    print dict(nextep)
     if nextep:
         print u'Next episode of %s (%02dx%02d %s) is scheduled on %s' % (series_name,
                 int(nextep['seasonnumber']), int(nextep['episodenumber']),
